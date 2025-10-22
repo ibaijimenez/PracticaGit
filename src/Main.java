@@ -31,6 +31,17 @@ public class Main {
         return fechauno;
     }
     public static void main(String[] args) {
+        String cadena_caracter = "";
+        boolean error = true;
+
+        do {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("a) Solicitar una cadena de caracteres");
+            System.out.println("b) Visualizar el caracter de la posición x de una cadena de caracteres.");
+            System.out.println("c) Convertir la cadena de caracteres en un número entero.");
+            System.out.println("d) Convertir la cadena de caracteres en una fecha.");
+            System.out.println("e) Finalizar");
+            String respuesta = sc.nextLine();
 
     }
 }
