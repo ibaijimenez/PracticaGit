@@ -8,6 +8,17 @@ public class Main {
         System.out.println("Ingresa la cadena:");
         return sc.nextLine();
     }
+    public static char posicionx(String cadena) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingresa la posición que desea saber:");
+        int pos = sc.nextInt() -1;
+        if (pos >= -1 && pos < cadena.length()) {
+            return cadena.charAt(pos);
+        } else {
+            System.out.println("Posición inválida");
+        }
+        return '\0';
+    }
     public static void main(String[] args) {
 
     }
