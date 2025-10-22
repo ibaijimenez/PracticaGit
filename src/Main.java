@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -22,6 +24,11 @@ public class Main {
     public static int entero(String cadena) {
         int cadena1 = Integer.parseInt(cadena());
         return cadena1;
+    }
+    public static LocalDate fecha(String cadena) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechauno = LocalDate.parse(cadena, dtf);
+        return fechauno;
     }
     public static void main(String[] args) {
 
