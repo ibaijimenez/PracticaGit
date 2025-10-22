@@ -19,6 +19,10 @@ public class Main {
         }
         return '\0';
     }
+    public static int entero(String cadena) {
+        int cadena1 = Integer.parseInt(cadena());
+        return cadena1;
+    }
     public static void main(String[] args) {
 
     }
