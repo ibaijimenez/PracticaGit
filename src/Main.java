@@ -43,5 +43,48 @@ public class Main {
             System.out.println("e) Finalizar");
             String respuesta = sc.nextLine();
 
+            switch (respuesta) {
+                case "a":
+                    try {
+                        cadena_caracter = cadena();
+                    }
+                    catch (Exception e) {
+                        System.out.println("Error en la cadena.");
+                    }
+
+                    break;
+                case "b":
+                    try {
+                        char letra = posicionx(cadena_caracter);
+                        System.out.println(letra);
+                    }
+                    catch (Exception e) {
+                        System.out.println(e.getClass());
+                    }
+                    break;
+                case "c":
+                    try {
+                        entero(cadena_caracter);
+                        System.out.println("la cadena tiene" + entero(cadena_caracter)+ "numeros");
+                    } catch (NumberFormatException e) {
+                        System.out.println("La cadena no es un número válido.");
+                    }
+                    break;
+                case "d":
+                    try {
+                        fecha(cadena_caracter);
+                        System.out.println("la fecha es: "  + fecha(cadena_caracter));
+                    }
+                    catch (java.time.format.DateTimeParseException e) {
+                        System.out.println("la cadena introducida no esta en formato correcto (dd/MM/yyyy)");
+                    }
+                    break;
+                case "e":
+                    error = false;
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+            }
+        } while (error);
     }
 }
